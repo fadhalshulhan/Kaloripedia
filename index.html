@@ -9,6 +9,26 @@
 
   <body>
     <h1>Kaloripedia – Kendali Kalori, Hidup Lebih Sehat</h1>
+    <input
+      type="text"
+      name="foodName"
+      id="foodName"
+      placeholder="Nama Makanan"
+    />
+
+    <input
+      type="number"
+      name="totaCalorieOfFood"
+      id="totaCalorieOfFood"
+      placeholder="Jumlah Kalori Makanan"
+    />
+
+    <button id="add-update-button" onclick="addFood()">
+      Tambahkan Makanan
+    </button>
+
+    <div id="foodList"></div>
+    <h2 id="dailyCalorieStatus">Total Kalori: 0</h2>
   </body>
 
   <script src="script.js"></script>
