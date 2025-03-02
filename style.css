@@ -1,48 +1,25 @@
-/* MyCalorieTrack - CSS */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
-}
-
-h1 {
-  color: #444;
-}
-
-input {
-  padding: 10px;
-  margin: 5px;
-  width: 200px;
-}
-
-button {
-  background-color: #ff5733;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #c70039;
-}
-
-#food-list {
-  margin-top: 20px;
-}
-
-.food-item {
-  background: white;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #f8f9fa;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-#total-calories {
-  margin-top: 15px;
-  font-weight: bold;
+.footer {
+  width: 100%;
+  margin-top: auto;
+  background: url("footerImageLandscape.png") no-repeat center center/cover;
+  height: 600px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white; /* Mengubah teks menjadi putih */
+}
+
+.footer-overlay {
+  width: 100%;
+
+  padding: 40px 0;
+  text-align: center;
+  color: white; /* Pastikan teks di dalam overlay juga putih */
 }
