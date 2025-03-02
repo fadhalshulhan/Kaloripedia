@@ -13,13 +13,12 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  color: white; /* Mengubah teks menjadi putih */
+  color: white; /* teks menjadi putih */
 }
 
 .footer-overlay {
   width: 100%;
-
   padding: 40px 0;
   text-align: center;
-  color: white; /* Pastikan teks di dalam overlay juga putih */
+  color: white;
 }
