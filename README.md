@@ -10,4 +10,4 @@ Overview:
 - Fadhal Shulhan as Full Stack
 - Andi Moh Apriansyah as Full Stack
 - Triya  Rizky Khairani as Front End 
-- Fahri Nazarudin as as Full Stack
+- Fahri Nazarudin as Full Stack
