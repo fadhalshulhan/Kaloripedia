@@ -1,13 +1,13 @@
-const form = document.getElementById("calorie-form");
+let form = document.getElementById("calorie-form");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Get input values
-  const gender = document.getElementById("gender").value;
-  const age = Number(document.getElementById("age").value);
-  const height = Number(document.getElementById("height").value);
-  const weight = Number(document.getElementById("weight").value);
-  const resultElement = document.getElementById("result");
+  let gender = document.getElementById("gender").value;
+  let age = Number(document.getElementById("age").value);
+  let height = Number(document.getElementById("height").value);
+  let weight = Number(document.getElementById("weight").value);
+  let resultElement = document.getElementById("result");
 
   // Validate input fields
   if (!gender || !age || !height || !weight) {
@@ -24,6 +24,6 @@ form.addEventListener("submit", function (event) {
   }
 
   resultElement.innerHTML = `<p>Your estimated daily calorie needs: <strong>${bmr.toFixed(
-    2
+    0
   )}</strong> calories</p>`;
 });
