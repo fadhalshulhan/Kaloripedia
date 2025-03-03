@@ -25,9 +25,7 @@ form.addEventListener("submit", function (event) {
     bmr = 447.6 + 9.2 * weight + 3.1 * height - 4.3 * age;
   }
 
-  resultElement.innerHTML = `<p>Perkiraan kebutuhan kalori harian Anda: <strong>${bmr.toFixed(
-    2
-  )}</strong> kalori</p>`;
+  resultElement.innerHTML = `<p><strong>${bmr.toFixed(0)}</strong> kalori</p>`;
 });
 
 // END BY ANDI
@@ -101,7 +99,7 @@ function displayFoodEntries() {
 
   document.getElementById(
     "dailyCalorieStatus"
-  ).textContent = `Total dikonsumsi: ${totalCalories}`;
+  ).textContent = `${totalCalories} Kalori`;
 }
 
 function editFood(index) {
