@@ -1,9 +1,10 @@
-<<<<<<< HEAD
 body {
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 .footer {
@@ -22,13 +23,6 @@ body {
   padding: 40px 0;
   text-align: center;
   color: white;
-=======
-/* MyCalorieTrack - CSS */
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f9f9f9;
-  padding: 20px;
 }
 
 h1 {
@@ -70,5 +64,46 @@ button:hover {
 #total-calories {
   margin-top: 15px;
   font-weight: bold;
->>>>>>> 70fcf1b32a034a6734c8f20ec91b9adff0571124
+}
+
+/* Create by Fahri */
+h1 {
+  color: #444;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+}
+
+button {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #c70039;
+}
+
+#food-list {
+  margin-top: 20px;
+}
+
+.food-item {
+  background: white;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#total-calories {
+  margin-top: 15px;
+  font-weight: bold;
 }
