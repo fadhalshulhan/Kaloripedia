@@ -1,0 +1,27 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #a7d6bf;
+}
+
+#about {
+  padding-top: 2rem;
+  background-color: #ffffff;
+}
+
+#login {
+  background-color: #a7d6bf;
+}
+
+.h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+.body {
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  padding-top: 7rem;
+}
