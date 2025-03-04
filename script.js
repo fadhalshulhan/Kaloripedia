@@ -99,7 +99,7 @@ function displayFoodEntries() {
 
   document.getElementById(
     "dailyCalorieStatus"
-  ).textContent = `${totalCalories} Kalori`;
+  ).innerHTML = `<strong>${totalCalories}</strong> Kalori`;
 }
 
 function editFood(index) {
@@ -125,3 +125,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // END BY FADHAL
 // =========
+
+// ====== Hitung Defisit Kalori ======
+function hitungDefisit() {
+  let totalCalories = parseInt(document.getElementById("result").value) || 0;
+  let dailyCalories =
+    parseInt(document.getElementById("dailyCalorieStatus").value) || 0;
+
+  let defisitKalori = totalCalories - dailyCalories;
+  document.getElementById(
+    "resultDefisit"
+  ).innerHTML = `<h5><strong>${defisitKalori}</strong> Kalori</h5>`;
+}
