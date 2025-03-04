@@ -1,3 +1,12 @@
+/* Sticky hanya untuk layar md (>=768px) ke atas */
+@media (min-width: 768px) {
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1020; /* Pastikan di atas elemen lain */
+  }
+}
+
 body {
   background-color: #f8f9fa;
   display: flex;
