@@ -144,8 +144,9 @@
             <div class="card d-flex justify-content-center align-items-center">
               <div class="card-body text-center">
                 <img
-                  src="https://image.pngaaa.com/456/3964456-middle.png"
-                  alt=""
+                  src="makanan.png"
+                  class="bg-white"
+                  alt="Image"
                   style="width: 50px"
                 />
                 <br />
@@ -176,109 +177,97 @@
             </div>
             <div class="mt-2">
               <p class="text-muted">
-                Perbandingan antara kebutuhan kalori harian dan jumlah kalori
-                yang dikonsumsi.
+                Angka ini menunjukan kondisi kalori kamu kurang atau berlebih
               </p>
             </div>
 
             <div id="resultDefisit" class="mt-2">
-              <h5><strong>0</strong> Kalori</h5>
+              <h5><b>0 Kalori</b></h5>
             </div>
-            <button onclick="hitungDefisit()" class="btn btn-primary mt-2">
-              Hitung Defisit
-            </button>
           </div>
         </div>
       </div>
-
-      <!-- Output Defisit Kalori Card -->
     </div>
+    <!-- Output Defisit Kalori Card -->
 
     <!--KESIMPULAN-->
 
     <div class="container mt-4 rounded-5">
       <div class="card rounded-12">
-        <div class="pt-5 pl-5 pr-5 pb-4 bg-body-tertiary rounded-5">
+        <div class="pt-5 pl-5 pr-5 pb-0 bg-body-tertiary rounded-5">
           <h3
             class="text-center font-weight-bold"
             style="font-family: Arial, Helvetica, sans-serif"
           >
             Kesimpulan
           </h3>
-          <p class="text-center mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium, perspiciatis expedita? Eum deserunt blanditiis officia
-            nihil unde odio deleniti laborum aliquam minima iusto magni quasi
-            esse, fugiat natus, fuga amet. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quae minima, dolores delectus odit
-            aliquam minus consequatur ipsam rerum illum! Soluta unde voluptates
-            quam cupiditate neque non obcaecati maiores commodi? Cupiditate.
-          </p>
         </div>
+        <div class="px-4 pb-4 text-center">
+          <div
+            id="kesimpulan-container"
+            class="text-center mt-4 p-3 bg-light rounded"
+          >
+            <p id="kesimpulan" class="mb-0">
+              Hasil akan muncul setelah Anda memasukkan data. Yuk, lengkapi
+              sekarang!
+            </p>
+          </div>
+        </div>
+
         <!--END KESIMPULAN-->
         <!-- SARAN-->
         <div class="px-4 pb-4 text-center">
           <div class="card-group">
             <div class="card">
               <div class="card-body text-center">
-                <h5 class="card-title">Kategori</h5>
-                <p class="card-text">Sangat Baik (Optimal) ✅</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+                <p class="card-title"><b>Kategori</b></p>
+                <p id="kategori" class="card-text">Belum ada data</p>
               </div>
             </div>
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title text-center">Defisit Kalori</h5>
-                <p class="card-text">0 - 300 kcal</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Target Defisit</h5>
-                <p class="card-text">
-                  Tergantung tujuan (maintain / cut / bulk)
+                <p class="card-title text-center"><b>Defisit Kalori</b></p>
+                <p id="resultDefisitKesimpulan" class="card-text">
+                  Belum ada data
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+            <div id="target-container" class="card">
+              <div class="card-body text-center">
+                <p class="card-title"><b>Target Defisit</b></p>
+                <p id="target_defisit" class="card-text rounded">
+                  Belum ada data
+                </p>
               </div>
             </div>
           </div>
           <div class="card-group mt-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title text-center">Total Kalori Dikonsumsi</h5>
-                <p class="card-text">
-                  2200 - 2600 kcal (Pria) / 1700 - 2100 kcal (Wanita)
+                <p class="card-title text-center">
+                  <b>Total Kebutuhan Kalori</b>
+                </p>
+                <p id="total_kalori_dibakar" class="card-text">
+                  Belum ada data
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
             </div>
+
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title text-center">Total Kalori Dibakar</h5>
-                <p class="card-text">Sesuai kebutuhan harian</p>
-              </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-center">Masukan</h5>
-                <p class="card-text">
-                  Pertahankan pola makan dan olahraga rutin
+                <p class="card-title text-center">
+                  <b>Total Kalori Dikonsumsi</b>
+                </p>
+                <p id="total_kalori_dikonsumsi" class="card-text">
+                  Belum ada data
                 </p>
               </div>
-              <div class="card-footer">
-                <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <p class="card-title text-center"><b>Masukan</b></p>
+                <p id="masukan" class="card-text">Belum ada data</p>
               </div>
             </div>
           </div>
