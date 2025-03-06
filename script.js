@@ -52,33 +52,35 @@ function addFood() {
   let foodNameError = document.getElementById("foodNameError");
   let calorieError = document.getElementById("calorieError");
 
+  // Cek apakah kolom 'Hitung Kalori' sudah lengkap
+  let gender = document.getElementById("gender").value;
+  let age = document.getElementById("age").value;
+  let height = document.getElementById("height").value;
+  let weight = document.getElementById("weight").value;
+  let isCalorieFormIncomplete = !gender || !age || !height || !weight;
+
   // Reset error state setiap kali tombol ditekan
   resetErrorState();
 
   let hasError = false;
 
-  // Validasi jika field kosong
-  if (!foodName) {
-    foodNameError.textContent = "Nama makanan tidak boleh kosong.";
-    document.getElementById("foodName").classList.add("is-invalid");
+  // Jika kolom 'Hitung Kalori' belum lengkap & kalori kosong, tampilkan error
+  if (isCalorieFormIncomplete && totalCalorieOfFood === "") {
+    calorieError.textContent = "Jumlah kalori tidak boleh kosong.";
+    document.getElementById("totalCalorieOfFood").classList.add("is-invalid");
     hasError = true;
   }
-  if (!totalCalorieOfFood) {
-    calorieError.textContent = "Jumlah kalori tidak boleh kosong.";
+
+  // Validasi bahwa jumlah kalori hanya boleh angka
+  let calorieRegex = /^[0-9]+$/;
+  if (totalCalorieOfFood !== "" && !calorieRegex.test(totalCalorieOfFood)) {
+    calorieError.textContent = "Jumlah kalori hanya boleh berisi angka.";
     document.getElementById("totalCalorieOfFood").classList.add("is-invalid");
     hasError = true;
   }
 
   // Jika ada error, hentikan proses
   if (hasError) {
-    return;
-  }
-
-  // Validasi Jumlah Kalori (Hanya angka)
-  let calorieRegex = /^[0-9]+$/;
-  if (!calorieRegex.test(totalCalorieOfFood)) {
-    calorieError.textContent = "Jumlah kalori hanya boleh berisi angka.";
-    document.getElementById("totalCalorieOfFood").classList.add("is-invalid");
     return;
   }
 
@@ -89,7 +91,7 @@ function addFood() {
 
   if (foodName) {
     if (editingIndex !== null) {
-      totalCaloriesConsumed -= foodEntries[editingIndex].calories;
+      totalCaloriesConsumed -= foodEntries[editingIndex].calories; // Kurangi jumlah lama
       foodEntries[editingIndex] = {
         name: foodName,
         calories: totalCalorieOfFood,
@@ -103,12 +105,14 @@ function addFood() {
       });
     }
 
+    // Update total kalori konsumsi
     totalCaloriesConsumed = foodEntries.reduce(
       (sum, entry) => sum + entry.calories,
       0
     );
-    document.getElementById("dailyCalorieStatus").textContent =
-      totalCaloriesConsumed;
+    document.getElementById(
+      "dailyCalorieStatus"
+    ).innerHTML = `<strong>${totalCaloriesConsumed}</strong> Kalori`;
 
     // Reset input setelah makanan ditambahkan
     document.getElementById("foodName").value = "";
