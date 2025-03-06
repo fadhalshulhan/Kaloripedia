@@ -126,14 +126,41 @@ document.addEventListener("DOMContentLoaded", () => {
 // END BY FADHAL
 // =========
 
-// ====== Hitung Defisit Kalori ======
-function hitungDefisit() {
-  let totalCalories = parseInt(document.getElementById("result").value) || 0;
-  let dailyCalories =
-    parseInt(document.getElementById("dailyCalorieStatus").value) || 0;
+// FAHRI //
 
-  let defisitKalori = totalCalories - dailyCalories;
+function hitungDefisit() {
+  let totalKebutuhanKaloriText = document.getElementById("result").innerText;
+  let totalDikonsumsiText =
+    document.getElementById("dailyCalorieStatus").innerText;
+
+  let totalKebutuhanKalori = parseInt(totalKebutuhanKaloriText);
+  let totalDikonsumsi = parseInt(totalDikonsumsiText);
+
+  let defisitKalori = totalKebutuhanKalori - totalDikonsumsi;
+
   document.getElementById(
     "resultDefisit"
   ).innerHTML = `<h5><strong>${defisitKalori}</strong> Kalori</h5>`;
+  let kesimpulan = "";
+
+  if (defisitKalori <= 300) {
+    kesimpulan =
+      "Kalorimu seimbang dan  aktivitasmu juga cukup, pertahankan pola makan dan  olahragamu";
+  } else if (defisitKalori > 300 && defisitKalori <= 500) {
+    kesimpulan =
+      "Defisit kalorimu kecil, dengan sedikit tingkatkan aktivitas bisa menyeimbangkan kalorimu ";
+  } else if (defisitKalori > 500 && defisitKalori <= 700) {
+    kesimpulan =
+      "Defisit kalorimu  mulai besar dan kamu perlu mengotrol pola makan dan tingkatkan aktivitasmu";
+  } else if (defisitKalori > 700 && defisitKalori <= 1000) {
+    kesimpulan =
+      "Defisit kalorimu ekstrem kamu beresiko obesitas atau kekurangan gizi, segera perbaiki! ";
+  } else if (defisitKalori > 1000) {
+    kesimpulan =
+      "Kalorimu tidak terkendali ini bisa berbahaya bagi kesehatan, butuh perubahan segera! dan jika perlu konsultasikan ke dokter! ";
+  }
+
+  document.getElementById("kesimpulan").innerText = kesimpulan;
 }
+
+// END FAHRI
