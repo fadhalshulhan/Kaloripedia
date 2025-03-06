@@ -173,6 +173,7 @@ function editFood(index) {
 function removeFood(index) {
   foodEntries.splice(index, 1);
   displayFoodEntries();
+  hitungDefisit(); // Tambahkan pemanggilan fungsi hitungDefisit di sini
 }
 
 function resetErrorState() {
