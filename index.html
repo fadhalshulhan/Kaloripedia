@@ -145,7 +145,8 @@
               <div class="card-body text-center">
                 <img
                   src="https://image.pngaaa.com/456/3964456-middle.png"
-                  alt=""
+                  class="bg-white"
+                  alt="Image"
                   style="width: 50px"
                 />
                 <br />
@@ -176,65 +177,95 @@
             </div>
             <div class="mt-2">
               <p class="text-muted">
-                Perbandingan antara kebutuhan kalori harian dan jumlah kalori
-                yang dikonsumsi.
+                Angka ini menunjukan kondisi kalori kamu kurang atau berlebih
               </p>
             </div>
 
             <div id="resultDefisit" class="mt-2">
-              <h5><strong>0</strong> Kalori</h5>
+              <h5><b>0 Kalori</b></h5>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Output Defisit Kalori Card -->
     </div>
+    <!-- Output Defisit Kalori Card -->
 
     <!--KESIMPULAN-->
 
     <div class="container mt-4 rounded-5">
       <div class="card rounded-12">
+        <div class="pt-5 pl-5 pr-5 pb-0 bg-body-tertiary rounded-5">
+          <h3
+            class="text-center font-weight-bold"
+            style="font-family: Arial, Helvetica, sans-serif"
+          >
+            Kesimpulan
+          </h3>
+        </div>
         <div class="px-4 pb-4 text-center">
-          <h3 class="text-center font-weight-bold">Kesimpulan</h3>
-          <p class="text-center mt-4">
-            Hasil evaluasi dari perhitungan kalori Anda.
-          </p>
+          <div
+            id="kesimpulan-container"
+            class="text-center mt-4 p-3 bg-light rounded"
+          >
+            <p id="kesimpulan" class="mb-0">
+              Hasil akan muncul setelah Anda memasukkan data. Yuk, lengkapi
+              sekarang!
+            </p>
+          </div>
+        </div>
 
+        <!--END KESIMPULAN-->
+        <!-- SARAN-->
+        <div class="px-4 pb-4 text-center">
           <div class="card-group">
             <div class="card">
               <div class="card-body text-center">
-                <h5 class="card-title">Kategori</h5>
-                <p id="kategori">-</p>
-                <!-- ✅ ADDED ID -->
+                <p class="card-title"><b>Kategori</b></p>
+                <p id="kategori" class="card-text">Belum ada data</p>
               </div>
             </div>
             <div class="card">
+              <div class="card-body">
+                <p class="card-title text-center"><b>Defisit Kalori</b></p>
+                <p id="resultDefisitKesimpulan" class="card-text">
+                  Belum ada data
+                </p>
+              </div>
+            </div>
+            <div id="target-container" class="card">
               <div class="card-body text-center">
-                <h5 class="card-title">Defisit Kalori</h5>
-                <p id="target_defisit">-</p>
-                <!-- ✅ ADDED ID -->
+                <p class="card-title"><b>Target Defisit</b></p>
+                <p id="target_defisit" class="card-text rounded">
+                  Belum ada data
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card-group mt-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-title text-center">
+                  <b>Total Kalori Dikonsumsi</b>
+                </p>
+                <p id="total_kalori_dikonsumsi" class="card-text">
+                  Belum ada data
+                </p>
               </div>
             </div>
             <div class="card">
-              <div class="card-body text-center">
-                <h5 class="card-title">Masukan</h5>
-                <p id="masukan">-</p>
-                <!-- ✅ ADDED ID -->
+              <div class="card-body">
+                <p class="card-title text-center">
+                  <b>Total Kalori Dibakar</b>
+                </p>
+                <p id="total_kalori_dibakar" class="card-text">
+                  Belum ada data
+                </p>
               </div>
             </div>
             <div class="card">
-              <div class="card-body text-center">
-                <h5 class="card-title">total kalori dikonsumsi</h5>
-                <p id="total_kalori_dikonsumsi">-</p>
-                <!-- ✅ ADDED ID -->
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body text-center">
-                <h5 class="card-title">total kalori dibakar</h5>
-                <p id="total_kalori_dibakar">-</p>
-                <!-- ✅ ADDED ID -->
+              <div class="card-body">
+                <p class="card-title text-center"><b>Masukan</b></p>
+                <p id="masukan" class="card-text">Belum ada data</p>
               </div>
             </div>
           </div>
