@@ -49,50 +49,60 @@
     <!-- BODY -->
     <div class="container mt-5">
       <div class="row">
-        <!-- Hitung Kalori Card -->
-        <div class="col-md-6">
-          <div class="card p-4 mb-4 rounded-5">
+        <!-- Kolom Hitung Kalori -->
+        <div class="col-md-6 mb-4">
+          <div class="card p-4 rounded-5">
             <h3 class="text-center font-weight-bold mb-3">Hitung Kalori</h3>
             <form id="calorie-form">
-              <div class="form-group mb-3">
-                <label for="gender">Jenis Kelamin</label>
+              <!-- Jenis Kelamin -->
+              <div class="form-group mb-4 mr-0">
                 <select id="gender" class="form-control">
-                  <option value="">-Pilih Jenis Kelamin-</option>
+                  <option value="">Jenis Kelamin</option>
                   <option value="male">Laki-laki</option>
                   <option value="female">Perempuan</option>
                 </select>
               </div>
-              <div class="form-group mb-3">
-                <label for="age">Umur (Tahun)</label>
-                <input type="number" class="form-control" id="age" min="1" />
+              <!-- Umur -->
+              <div class="form-group mb-4 ml-0">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  min="1"
+                  placeholder="Umur (Tahun)"
+                />
               </div>
-              <div class="form-group mb-3">
-                <label for="height">Tinggi (cm)</label>
+              <!-- Tinggi -->
+              <div class="form-group mb-4">
                 <input
                   type="number"
                   class="form-control"
                   id="height"
                   min="50"
+                  placeholder="Tinggi (cm)"
                 />
               </div>
-              <div class="form-group mb-3">
-                <label for="weight">Berat (kg)</label>
+              <!-- Berat -->
+              <div class="form-group mb-4">
                 <input
                   type="number"
                   class="form-control"
                   id="weight"
                   min="10"
+                  placeholder="Berat (kg)"
                 />
               </div>
+              <!-- Tombol Hitung -->
               <button type="submit" class="btn btn-primary btn-block">
                 Hitung Sekarang
               </button>
             </form>
 
+            <!-- Bagian hasil -->
             <div
               class="card mt-4 d-flex justify-content-center align-items-center"
             >
-              <div class="card-body" style="text-align: center">
+              <div class="card-body text-center">
                 <img
                   src="https://st2.depositphotos.com/5266903/8494/v/450/depositphotos_84945164-stock-illustration-running-man-icon.jpg"
                   alt=""
@@ -110,10 +120,11 @@
           </div>
         </div>
 
-        <!-- Input Makanan Kalori Card -->
+        <!-- Kolom Makanan Konsumsi -->
         <div class="col-md-6 mb-4">
           <div class="card p-4 rounded-5">
             <h3 class="text-center font-weight-bold mb-3">Makanan Konsumsi</h3>
+            <!-- Nama Makanan -->
             <div class="form-group mb-3">
               <input
                 type="text"
@@ -123,6 +134,7 @@
               />
               <small id="foodNameError" class="text-danger"></small>
             </div>
+            <!-- Jumlah Kalori -->
             <div class="form-group mb-3">
               <input
                 type="text"
@@ -132,6 +144,7 @@
               />
               <small id="calorieError" class="text-danger"></small>
             </div>
+            <!-- Tombol Tambah -->
             <button
               id="add-update-button"
               class="btn btn-primary btn-block mb-3"
@@ -139,8 +152,11 @@
             >
               Tambahkan Makanan
             </button>
+
+            <!-- Daftar makanan -->
             <div id="foodList" class="mb-3"></div>
 
+            <!-- Bagian total dikonsumsi -->
             <div class="card d-flex justify-content-center align-items-center">
               <div class="card-body text-center">
                 <img
@@ -162,7 +178,7 @@
         </div>
       </div>
 
-      <!-- Output Defisit Kalori Card -->
+      <!-- Input Defisit Kalori Card -->
       <div class="rounded-5">
         <div class="card">
           <div class="card-body text-center">
