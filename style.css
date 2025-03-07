@@ -7,6 +7,7 @@
   }
 }
 
+/* Mengatur layout dasar */
 body {
   background-color: #f8f9fa;
   display: flex;
@@ -15,6 +16,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* FOOTER */
 .footer {
   width: 100%;
   margin-top: auto;
@@ -25,7 +27,6 @@ body {
   justify-content: center;
   color: white; /* teks menjadi putih */
 }
-
 .footer-overlay {
   width: 100%;
   padding: 40px 0;
@@ -33,16 +34,19 @@ body {
   color: white;
 }
 
+/* Heading contoh */
 h1 {
   color: #444;
 }
 
+/* Style input default */
 input {
   padding: 10px;
   margin: 5px;
   width: 200px;
 }
 
+/* Style tombol custom (opsional jika tidak pakai .btn Bootstrap) */
 button {
   background-color: #ff5733;
   color: white;
@@ -51,24 +55,36 @@ button {
   cursor: pointer;
   border-radius: 5px;
 }
-
 button:hover {
   background-color: #c70039;
 }
 
-#food-list {
-  margin-top: 20px;
-}
-
+/* Setiap item makanan */
 .food-item {
-  background: white;
-  margin: 5px;
-  padding: 10px;
+  background: #ffffff;
+  margin: 5px 0; /* jarak antar item */
+  padding: 10px; /* ruang dalam item */
   border-radius: 5px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  border: 1px solid #ddd; /* garis tipis agar lebih jelas */
 }
 
+/* Teks keterangan makanan */
+.food-item span {
+  flex: 1; /* agar teks lebar otomatis */
+  margin-right: 1rem; /* beri jarak dengan tombol */
+  word-wrap: break-word; /* pecah teks panjang ke baris baru jika perlu */
+  color: #333;
+}
+
+/* Atur tombol Edit/Hapus di dalam item makanan */
+.food-item button {
+  margin-left: 0.5rem; /* jarak antar tombol */
+}
+
+/* Total kalori (jika digunakan ID ini) */
 #total-calories {
   margin-top: 15px;
   font-weight: bold;
