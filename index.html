@@ -54,15 +54,13 @@
           <div class="card p-4 rounded-5">
             <h3 class="text-center font-weight-bold mb-3">Hitung Kalori</h3>
             <form id="calorie-form">
-              <!-- Jenis Kelamin -->
-              <div class="form-group mb-4 mr-0">
+              <div class="form-group mb-3">
                 <select id="gender" class="form-control">
                   <option value="">Jenis Kelamin</option>
                   <option value="male">Laki-laki</option>
                   <option value="female">Perempuan</option>
                 </select>
               </div>
-              <!-- Umur -->
               <div class="form-group mb-3">
                 <input
                   type="number"
@@ -70,9 +68,10 @@
                   id="age"
                   min="1"
                   placeholder="Umur (Tahun)"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
                 />
               </div>
-              <!-- Tinggi -->
               <div class="form-group mb-3">
                 <input
                   type="number"
@@ -80,19 +79,21 @@
                   id="height"
                   min="50"
                   placeholder="Tinggi (cm)"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
                 />
               </div>
-              <!-- Berat -->
-              <div class="form-group mb-4">
+              <div class="form-group mb-3">
                 <input
                   type="number"
                   class="form-control"
                   id="weight"
                   min="10"
                   placeholder="Berat (kg)"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
                 />
               </div>
-              <!-- Tombol Hitung -->
               <button type="submit" class="btn btn-primary btn-block">
                 Hitung Sekarang
               </button>
@@ -124,39 +125,46 @@
         <div class="col-md-6 mb-4">
           <div class="card p-4 rounded-5">
             <h3 class="text-center font-weight-bold mb-3">Makanan Konsumsi</h3>
-            <!-- Nama Makanan -->
-            <div class="form-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="foodName"
-                placeholder="Nama Makanan"
-              />
-              <small id="foodNameError" class="text-danger"></small>
-            </div>
-            <!-- Jumlah Kalori -->
-            <div class="form-group mb-4">
-              <input
-                type="text"
-                class="form-control"
-                id="totalCalorieOfFood"
-                placeholder="Jumlah Kalori Makanan"
-              />
-              <small id="calorieError" class="text-danger"></small>
-            </div>
-            <!-- Tombol Tambah -->
-            <button
-              id="add-update-button"
-              class="btn btn-primary btn-block mb-3"
-              onclick="addFood()"
-            >
-              Tambahkan Makanan
-            </button>
+            <form id="food-form">
+              <!-- Nama Makanan -->
+              <div class="form-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="foodName"
+                  placeholder="Nama Makanan"
+                />
+                <small id="foodNameError" class="text-danger"></small>
+              </div>
+              <!-- Jumlah Kalori -->
+              <div class="form-group mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="totalCalorieOfFood"
+                  placeholder="Jumlah Kalori Makanan"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                />
+                <small id="calorieError" class="text-danger"></small>
+              </div>
+              <!-- Tombol Tambah -->
+              <div class="form-group mb-3">
+                <button
+                  id="add-update-button"
+                  type="button"
+                  class="btn btn-primary btn-block"
+                  onclick="addFood()"
+                >
+                  Tambahkan Makanan
+                </button>
+              </div>
+            </form>
 
             <!-- Daftar makanan -->
             <div id="foodList" class="mb-3"></div>
 
-            <!-- Bagian total dikonsumsi -->
+            <!-- Bagian Total dikonsumsi -->
             <div class="card d-flex justify-content-center align-items-center">
               <div class="card-body text-center">
                 <img
